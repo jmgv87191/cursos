@@ -1,0 +1,20 @@
+.pulser{
+    width: 30px;
+    height: 30px;
+    background: #09f;
+    border-radius: 50%;
+    position: relative;
+    transition-duration: 2s;
+}
+
+.pulser:hover{
+    scale: 2;
+    background: rebeccapurple;
+    box-shadow: 0 0 10px purple;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+}
