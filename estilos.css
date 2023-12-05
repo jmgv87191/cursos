@@ -5,12 +5,15 @@
     border-radius:50% ;
     position: relative;
     transition-duration: 2s;
+    transition-property: background, scale;
+    transition-timing-function: steps(5);
 }
+
 
 .pulser:hover{
     scale: 2;
     background: purple;
-    box-shadow: 0 0 10px plum;
+    box-shadow: 0 0 10px  purple;
 }
 
 
