@@ -21,7 +21,7 @@ body, html{
     border: 3px solid green;
     position: relative;
     display: flex;
-    justify-content: end;
+    justify-content: spa;
 }
 
 #caja_1{
