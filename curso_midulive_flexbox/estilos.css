@@ -1,0 +1,13 @@
+.container{
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 48px;
+}
+
+body{
+    background: #09f;
+    margin: 0;
+}
