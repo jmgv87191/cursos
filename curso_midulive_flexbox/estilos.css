@@ -1,19 +1,32 @@
-.parent{
-    border: 5px solid black;
-    width: 250px;
-    height: 500px;
-    box-sizing: border-box;
-    position: relative;
-}
 
-.container{
-    background: #09f;
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    right: 0;
-}
 
 body{
-    background: rgb(188, 228, 255);
+}
+
+.parent{
+    display: flex;
+    border: 1px solid black;
+    width: 400px;
+    height: 40vh;
+    justify-content: space-between;
+}
+
+.item{
+    border: 1px solid black;
+    opacity: .9;
+    box-sizing: border-box;
+    background-color: #09f;
+    width: 50px;
+    flex: 1;
+}
+
+.item:first-child{
+    background: yellow;
+}
+
+.item:nth-child(2){
+}
+
+.item:last-child{
+    background: red;
 }
