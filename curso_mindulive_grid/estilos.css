@@ -5,9 +5,27 @@ body{
     background: lightsalmon;
     border: 3px solid black;
     border-radius: 10px;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "aside main main"
+    "footer footer footer"
+    ;
+}
+
+@media (width <500px) {
+    .container{
+        grid-template-areas:
+        "header header "
+        "aside aside "
+        "main main "
+        "footer footer "
+        ;
+        grid-template-rows: repeat(4 ,1fr);
+    }
 }
 
 .container div{
@@ -18,29 +36,30 @@ body{
 
 .container div:first-child{
     background-color: green;
-    grid-area: 1/1/1/4;
+    grid-area: header;
     display: flex;
     justify-content: center;
 }
 
 .container div:nth-child(2){
     background-color: red;
-    grid-area: 2/1/4/1;
+    grid-area: aside;
+    grid-template-columns: repeat(3, 1fr) auto;
 }
 
 .container div:nth-child(3){
     background-color: rgba(210, 105, 30, 0.584);
-    grid-area: 1/1/1/1;
+    grid-area: main;
 }
 
 .container div:last-child{
     background: yellow;
-    grid-area: 4/1/5/4;
+    grid-area: footer;
 }
 
-@media (width < 500px) {
+/* @media (width < 500px) {
     .container div:nth-child(3){
         background-color: rgba(0, 0, 0, 0.584);
         grid-area: initial;
     }
-}
+} */
