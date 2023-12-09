@@ -5,15 +5,18 @@
     border-radius:50% ;
     position: relative;
     transition-duration: 2s;
-    transition-property: background, scale;
-    transition-timing-function: steps(5);
+    transition-timing-function: ease;
+    opacity: 0;
+    
 }
 
+section{
+    display: flex;
+}
 
-.pulser:hover{
-    scale: 2;
-    background: purple;
-    box-shadow: 0 0 10px  purple;
+section:hover .pulser{
+
+    opacity: 1;
 }
 
 
@@ -22,3 +25,17 @@ body{
     place-content: center;
     min-height: 50vh;
 }
+
+.pulser:first-child{
+    transition-delay: 0s;
+}
+
+.pulser:nth-child(2){
+    transition-delay: 300ms;
+}
+
+.pulser:nth-child(3){
+    transition-delay: 600ms;
+} 
+
+
