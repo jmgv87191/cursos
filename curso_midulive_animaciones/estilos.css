@@ -9,16 +9,24 @@ main{
 #progress{
     position: fixed;
     top: 0;
-    width: 0%;
-    background: red;
-    height: 5vh;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
 
-    animation: progress-grow auto linear;
+    animation: progress-grow auto linear both;
     animation-timeline: scroll(root);
+    animation-range:  0 200px;
 }
 
 
 @keyframes progress-grow{
-    from {width: 0;}
-    to { width: 100%; }
+    to{
+        background: rgb(147, 147, 147);
+        font-size: 25px;
+        backdrop-filter: blur(5px);
+    }
 }
